@@ -1,0 +1,6 @@
+@DocketDotnet22Sep2025_HostAddress = http://localhost:5185
+
+GET {{DocketDotnet22Sep2025_HostAddress}}/test
+Accept: application/json
+
+###

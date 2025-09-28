@@ -1,0 +1,62 @@
+## Build results
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.app
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+
+## Rider
+.idea/
+
+## ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet
+*.nupkg
+.nuget/
+packages/
+*.snupkg
+
+## Entity Framework
+migrations/
+
+## Logs
+*.log
+logs/
+
+## Temporary files
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+## Publish output
+publish/
+wwwroot/
+
+## Test results
+TestResults/
+*.trx
+*.coverage
+
+## Others
+*.vs/
+*.dbmdl
+*.pidb
+*.psess
+*.vsp
+*.pdb

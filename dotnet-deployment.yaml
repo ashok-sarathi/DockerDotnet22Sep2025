@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docketdotnet22sep2025-deployment-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docketdotnet22sep2025-prod
+  template:
+    metadata:
+      labels:
+        app: docketdotnet22sep2025-prod
+    spec:
+      containers:
+      - name: dotnet-container
+        image: ashoksarathi004/docketdotnet22sep2025:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Production
+        - name: CUSTOM_API_KEY
+          value: kubernet-prod-app
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docketdotnet22sep2025-service-prod
+spec:
+  selector:
+    app: docketdotnet22sep2025-prod
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: NodePort
